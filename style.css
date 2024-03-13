@@ -11,7 +11,8 @@ body {
 
 .container {
     width: 1800px;
-    margin: 0 auto;
+    margin:  auto;
+    padding: 10px 150px 240px ;
     height: 878px;
     top: 51px;
     left: 64px;
@@ -24,8 +25,11 @@ body {
     column-gap: 20px;
     row-gap: 40px;
     display: grid;
-    grid-template-columns: 380px 500px 220px;
-    grid-template-rows: 300px 0 500px 500px;
+    justify-content: center;
+    grid-template-columns: 380px 500px auto;
+    grid-template-areas: 
+    img01 img03 img04
+    img02 img03 img05 img06;
 
 }
 
@@ -42,4 +46,80 @@ body {
     padding: 0;
     display: grid;
   
+}
+
+.img01 {
+    width: 376px;
+    height: 335px;
+    top: 227px;
+    left: 64px;
+}
+
+.img03{
+    width: 512px;
+    height: 702px;
+    top: 227px;
+    left: 472px;
+}
+
+.img04 {
+    width: 648px;
+    height: 335px;
+    top: 227px;
+    left: 1016px;
+}
+
+.img02 {
+    width: 376px;
+    height: 335px;
+    top: 594px;
+    left: 65px;
+}
+
+.img05 {
+    width: 240px;
+    height: 335px;
+    top: 594px;
+    left: 1016px;
+}
+
+.img06 {
+    width: 376px;
+    height: 335px;
+    top: 594px;
+    left: 1288px;
+    grid-area: img06;
+}
+
+.items-1 {
+    grid-area: img01;
+}
+
+.items-3{
+    grid-area:img03;
+}
+
+
+.items-4 {
+    grid-area:img04;
+}
+
+
+.items-2{
+    grid-area:img02 ;
+}
+
+
+.items-3 {
+    grid-area:img03;
+}
+
+
+.items-5{
+    grid-area:img05;
+}
+
+
+.items-6  {
+    grid-area:img06;
 }
