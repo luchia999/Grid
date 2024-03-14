@@ -10,42 +10,36 @@ body {
 }
 
 .container {
+    min-width: 900px;
     width: 1800px;
     margin:  auto;
-    padding: 10px 150px 240px ;
+    padding: 10px 100px;
     height: 878px;
-    top: 51px;
-    left: 64px;
-}
-
-.catalog__items {
-    margin: 0 auto;
-    padding: 0 0 0 15px; 
-    list-style: none;
-    column-gap: 20px;
-    row-gap: 40px;
     display: grid;
-    justify-content: center;
-    grid-template-columns: 380px 500px auto;
-    grid-template-areas: 
-    img01 img03 img04
-    img02 img03 img05 img06;
-
+    align-content: center;
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(2, calc((100% - 12px) / 2));
-        column-gap: 12px;
-        row-gap: 18px;
+        grid-template-columns: repeat(1, 425px((100% - 12px) / 2));
+        gap: 12px, 18px;
     }
 }
 
-.catalog__items-item {
-    max-width: 100%;
-    padding: 0;
+.catalog__items-img{
+    margin: 0 auto;
+    padding: 10px 0 ; 
+    list-style: none;
+    column-gap: 20px;
+    row-gap: 40px;
     display: grid;
-  
+    justify-content: space-between;
+    grid-template-columns: 380px 500px auto auto;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.catalog__items-img {
+    max-width: 100%;
 }
 
 .img01 {
@@ -91,35 +85,39 @@ body {
     grid-area: img06;
 }
 
-.items-1 {
-    grid-area: img01;
+.catalog__items-1 {
+    grid-area: 1 / 1 ;
 }
 
-.items-3{
-    grid-area:img03;
-}
-
-
-.items-4 {
-    grid-area:img04;
+.catalog__items-3 {
+    grid-area: 1 / 2 / span 2 /span 2;
 }
 
 
-.items-2{
-    grid-area:img02 ;
+.icatalog__items-4{
+    grid-area: 1 / 5; 
 }
 
 
-.items-3 {
-    grid-area:img03;
+.catalog__items-2{
+    grid-area: 2 / 1 ;
+}
+
+.catalog__items-5{
+    grid-area: 2 / 4 ;
+    justify-self:start;
 }
 
 
-.items-5{
-    grid-area:img05;
+.catalog__items-6 {
+    grid-area: 2 / 4 ;
+    justify-self: end;
 }
 
 
-.items-6  {
-    grid-area:img06;
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, calc((100% - 12px) / 2));
+        gap: 12px, 18px;
+    }
 }
