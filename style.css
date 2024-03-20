@@ -13,18 +13,17 @@ body {
     width: 100%;
     max-width: 1600px;    
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 20px 20px;
     height: 878px;
     display: grid;
     align-content: center;
 }
 
 .container h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: bold;
     padding: 10px 20px;
     margin: 5px;
- 
  }
   
  .container p {
@@ -34,14 +33,13 @@ body {
  }
 
 .catalog__items{
-    padding: 10px 20px ; 
     list-style: none;
-    column-gap: 20px;
-    row-gap: 40px;
+    column-gap: 0.9%;
+    row-gap: 0.9%;
     display: grid;
-    justify-content: space-around;
-    grid-template-columns: 380px 500px auto auto;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 24% 27% auto;
+    grid-template-rows: 50% 0 50% 50%;
+    justify-items: center; 
 }
 
 .catalog__items {
@@ -51,44 +49,31 @@ body {
 .catalog__items-1{
     width: 376px;
     height: 335px;
-    top: 227px;
-    left: 64px;
 }
 
 .catalog__items-3 {
     width: 512px;
     height: 702px;
-    top: 227px;
-    left: 472px;
 }
 
 .catalog__items-4 {
     width: 648px;
     height: 335px;
-    top: 227px;
-    left: 1016px;
 }
 
 .catalog__items-2{
     width: 376px;
     height: 335px;
-    top: 594px;
-    left: 65px;
 }
 
 .catalog__items-5{
     width: 240px;
     height: 335px;
-    top: 594px;
-    left: 1016px;
 }
 
 .catalog__items-6{
     width: 376px;
-    height: 335px;
-    top: 594px;
-    left: 1288px;
-   
+    height: 335px;   
 }
 
 .catalog__items-1 {
@@ -120,7 +105,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .container{
-        grid-template-columns: (1, 425px);
+        grid-template-columns: (2, 425px);
+        grid-template-rows: repeat (3, 254px);
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
@@ -142,10 +128,14 @@ body {
        
     }
 
-    .catalog__items img{
+    .catalog__items img {
+        grid-template-columns: (1, 425px);
+        grid-template-rows: repeat (6, 254px);
+        display: flex;
+        flex-wrap: wrap;
         max-width: 100%;  
         margin-left: 20%;    
-        grid-template-columns: repeat(1, 425px);   
+         
     }
 }
 
