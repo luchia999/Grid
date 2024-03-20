@@ -136,12 +136,13 @@ body {
         flex-basis: 70%;
         font-size: 1.5rem;
         padding: 0;
-        margin: 0;
+        margin-right: 25%;
        
     }
 
-    .catalog__items{
-        flex-basis: 100%;
+    .catalog__items img{
+        max-width: 100%;
+       
         grid-template-columns: repeat(1, 425px);   
     }
 }
