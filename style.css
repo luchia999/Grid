@@ -128,8 +128,7 @@ body {
 
     .catalog__items img {
         grid-template-columns: (1, 425px);
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;  
         max-width: 100%;  
         margin-left: 20%;    
          
